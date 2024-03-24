@@ -135,3 +135,74 @@ function uploadImage() {
 
 // Optionally, auto-upload or preview the image when selected
 document.getElementById('imageUpload').onchange = uploadImage;
+
+
+### FILE SELECTION AND SUBMIT
+
+##HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Photos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="upload-container">
+        <h2>Upload Your Photos</h2>
+        <form id="uploadForm" action="YOUR_SERVER_ENDPOINT" method="POST" enctype="multipart/form-data">
+            <input type="file" id="photoUpload" name="photos" multiple>
+            <button type="submit">Upload</button>
+        </form>
+        <div id="preview"></div>
+    </div>
+
+    <script src="uploadScript.js"></script>
+</body>
+</html>
+
+##CSS
+.upload-container {
+    width: 300px;
+    margin: auto;
+    padding: 20px;
+    background: #f4f4f4;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+input[type="file"] {
+    margin: 20px 0;
+}
+
+button {
+    cursor: pointer;
+    padding: 10px 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+
+
+##Javascript
+document.getElementById('photoUpload').addEventListener('change', function(event) {
+    var preview = document.getElementById('preview');
+    preview.innerHTML = ''; // Clear current preview
+    var files = event.target.files;
+
+    for (var i = 0; i < files.length; i++) {
+        var file = files[i];
+        var img = document.createElement('img');
+        img.src = URL.createObjectURL(file);
+        img.height = 100; // Set the height of preview image
+        img.onload = function() {
+            URL.revokeObjectURL(this.src); // Clean up after yourself.
+        };
+        preview.appendChild(img);
+    }
+});
+
