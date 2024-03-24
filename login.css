@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Newsreader';
+    font-size: 1.2em;
+}
+
+.Logo{
+    margin-right: 85%;
+    font-size: 0.8em;
+    color: #7a5995
+}
+
+
+.login-form{
+    align-items: center;    /* Centered All of the inputs and buttons */
+    list-style: none;
+    text-align: center;
+    color: #8d8d8d;
+}
+
+.form-group{
+        height: 15h;
+        width: 25%;
+        text-align:center;
+        padding: 1rem 0;
+        vertical-align: middle;
+        margin-left: 21.6%;
+        margin-top: 1%;
+}
+
+#password
+{
+    background-color: #efefef;
+    height: 120%;
+    width: 182%;
+    margin-left: 23%;
+}       
+
+#confirm-password
+{
+    margin-left: 23%;
+    background-color: #efefef;
+    width: 182%;
+    
+}
+
+.Title{
+    font-size: 110px;
+    color: #7a5995
+}
+.submit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0, 15rem;
+    color: #7a5995;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 3px; 
+    border-color: #7a5995;
+    margin-top: 3%;
+}
+
+
