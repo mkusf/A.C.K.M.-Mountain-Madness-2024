@@ -20,22 +20,33 @@ a{
     padding: 10px;
 }
 
-.upload-select {
+.gallery-polariods {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     min-height: 20vh;
+    min-width: 20vw;
     padding: 10px;
 }
 
-.upload-options {
+.test {
+    width: 10.375em;
+    height:  10.375em;
+    margin-top: 1.785em;
+}
+.gallery-polariod-image {
+    background-image: url(images/polariod.jpg);
+    background-size:contain;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content:flex-start;
     align-items: center;
-    min-height: 20vh;
-    padding: 20px;
+    min-height: 30vh;
+    min-width: 16em;
+    max-width: 16em;
 }
 
 .upload-form {
@@ -64,6 +75,10 @@ a{
     padding-right: 80vw;
 }
 
+.page-subtitle {
+    padding-right: 80vw;
+    font-size: 3.5em;
+}
 .space {
     margin-top: 2em;
 }

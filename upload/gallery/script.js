@@ -1,3 +1,17 @@
+const displayImages = document.getElementById('page-polariods')
+const images = JSON.parse(localStorage.getItem('images'));
+
+images.forEach((image) => {
+    displayImages.innerHTML += `
+        <div class="gallery-polariod-image">
+            <div class ="test">
+                <img style="width: 100%" src="${image}">
+            </div>
+        </div>
+    `
+})
+
+/*
 function myFunction(elem)
 {
     console.log(elem.id);
@@ -26,7 +40,7 @@ function myFunction(elem)
         window.location.href = "film/film.html";
     }
 }
-
+*/
 
 
 

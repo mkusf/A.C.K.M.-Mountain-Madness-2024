@@ -1,8 +1,9 @@
 polariod_border = new Boolean(false);
 film_border = new Boolean(false);
+let images = [];
+
 function myFunction(elem)
 {
-    console.log(elem.id);
     if(elem.id == "photo-upload") {
         document.getElementById('photo-upload').addEventListener('change', function(event) {
             const previewContainer = document.getElementById('preview-container');
@@ -16,11 +17,31 @@ function myFunction(elem)
                     img.style.maxWidth = '200px';
                     img.style.margin = '10px';
                     previewContainer.appendChild(img);
+                    images = [];
+                    images.push(e.target.result);
                 };
-                console.log(file);
                 reader.readAsDataURL(file);
             }
         });
+    }
+    /*<a href="gallery/gallery.html" class="website-gallery purple">Gallery</a>*/
+    if(elem.id == "page-gallery") {
+        window.location.href = "gallery/gallery.html";
+    }
+    if(elem.id == "photo-distrubute") {
+        
+        if(images.length > 0) {
+            const imagesArray = localStorage.getItem('images')
+            let images2 = []
+            if (imagesArray) {
+                images2 = [...JSON.parse(imagesArray)]
+                images2.push(images[0])
+            }
+            else {
+                images2.push(images[0])
+            }
+            localStorage.setItem('images', JSON.stringify(images2))
+        }
     }
     if(elem.id == "page-polariod" ){
         if(polariod_border == false) {
