@@ -1,0 +1,22 @@
+.upload-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.upload-form {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 500px;
+}
+
+.preview-container img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+}
