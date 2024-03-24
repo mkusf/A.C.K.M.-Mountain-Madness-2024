@@ -1,0 +1,41 @@
+###HTML
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Background</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Change Background</h2>
+        <form id="backgroundForm">
+            <div class="background-options">
+                <label>
+                    <input type="radio" name="background" value="default" checked>
+                    Default
+                </label>
+                <label>
+                    <input type="radio" name="background" value="mountain">
+                    Mountain
+                </label>
+                <label>
+                    <input type="radio" name="background" value="forest">
+                    Forest
+                </label>
+                <!-- Add more predefined options here -->
+            </div>
+            <div class="form-group">
+                <label for="customBackground">Or upload your own:</label>
+                <input type="file" id="customBackground" name="customBackground" accept="image/*">
+            </div>
+            <button type="button" onclick="changeBackground()">Change Background</button>
+        </form>
+        <div id="preview"></div>
+    </div>
+
+    <script src="backgroundScript.js"></script>
+</body>
+</html>

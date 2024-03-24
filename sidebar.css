@@ -9,7 +9,10 @@
     overflow-x: hidden;
     padding-top: 16px;
   }
-  
+  .purple {
+    color: #7B5895;
+}
+
   /* Style sidebar links */
   .normal {
     padding: 6px 8px 6px 16px;
@@ -52,3 +55,13 @@
     .sidebar {padding-top: 15px;}
     .sidebar a {font-size: 18px;}
   }
+  .upload-title {
+
+    font-size: 5.5em;
+    
+    /*
+    margin-bottom: 0.1em;
+    */
+    margin:0.1em;
+    text-align: center;
+}
