@@ -1,0 +1,96 @@
+
+
+### HTML (index.html)
+This HTML structure defines the main components of the welcome page, including a navigation bar with placeholder links for other sections of the website, and a welcome message section.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Mountain Madness 2024</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Log In</a></li>
+                <li><a href="#">Sign Up</a></li>
+                <li><a href="#">Upload Photos</a></li>
+                <li><a href="#">Change Profile</a></li>
+                <li><a href="#">Change Background</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="welcome-section">
+            <h1>Welcome to Mountain Madness 2024</h1>
+            <p>Join us for an adventure of a lifetime.</p>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Mountain Madness</p>
+    </footer>
+</body>
+</html>
+```
+
+### CSS (style.css)
+This CSS file includes basic styling for the welcome page, including styles for the navigation bar, the welcome section, and a background image. Adjustments can be made based on the specific designs seen in the "Welcome Page.png".
+
+```css
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('wallpaper1 1.png');
+    background-size: cover;
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    overflow: hidden;
+}
+
+header nav ul li {
+    float: left;
+}
+
+header nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+header nav ul li a:hover {
+    background-color: #111;
+}
+
+.welcome-section {
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+```
+
+These code snippets provide a starting point. You might want to replace `'wallpaper1 1.png'` in the CSS with the correct path relative to where your CSS file is located or use it as a direct link if you're hosting the image online.
+
+Would you like to proceed with adjustments or details on another page?
