@@ -1,0 +1,80 @@
+### HTML
+<!-- The button to open the sidebar -->
+<button onclick="openSidebar()">☰ Open Sidebar</button>
+
+<!-- The Sidebar -->
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">×</a>
+  <!-- Add additional links or content here -->
+  <a href="#">Home</a>
+  <a href="#">Change Background</a>
+  <a href="#">Contact</a>
+</div>
+
+<!-- Page content -->
+<div id="main">
+  <!-- Your page content goes here -->
+</div>
+
+
+###CSS Styling
+/* The sidebar menu */
+.sidebar {
+  height: 100%; /* Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #111; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide out the sidebar */
+  padding-top: 60px; /* Place content 60px from the top */
+}
+
+/* The sidebar links */
+.sidebar a {
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the sidebar links, change their color */
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+/* The close button */
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style to push the page content to the right when opening the sidebar */
+#main {
+  transition: margin-left .5s; /* If you want a transition effect */
+  padding: 20px;
+}
+
+
+
+###JAVASCRIPT FUNCTIONALITY
+
+function openSidebar() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeSidebar() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+
+
+
