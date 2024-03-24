@@ -1,0 +1,93 @@
+###HTML
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Background</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Change Background</h2>
+        <form id="backgroundForm">
+            <div class="background-options">
+                <label>
+                    <input type="radio" name="background" value="default" checked>
+                    Default
+                </label>
+                <label>
+                    <input type="radio" name="background" value="mountain">
+                    Mountain
+                </label>
+                <label>
+                    <input type="radio" name="background" value="forest">
+                    Forest
+                </label>
+                <!-- Add more predefined options here -->
+            </div>
+            <div class="form-group">
+                <label for="customBackground">Or upload your own:</label>
+                <input type="file" id="customBackground" name="customBackground" accept="image/*">
+            </div>
+            <button type="button" onclick="changeBackground()">Change Background</button>
+        </form>
+        <div id="preview"></div>
+    </div>
+
+    <script src="backgroundScript.js"></script>
+</body>
+</html>
+
+
+
+#CSS
+
+.background-options label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#preview {
+    margin-top: 20px;
+    height: 100px; /* Adjust based on your preference */
+    background-size: cover;
+    border: 1px solid #ddd;
+}
+
+
+
+###JAVASCRIPT for background change
+
+function changeBackground() {
+    const selectedOption = document.querySelector('input[name="background"]:checked').value;
+    const customBackground = document.getElementById('customBackground').files[0];
+    
+    if (customBackground) {
+        // Preview the uploaded image
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            document.body.style.backgroundImage = `url('${e.target.result}')`;
+        };
+        reader.readAsDataURL(customBackground);
+    } else {
+        // Set predefined background based on selected option
+        switch (selectedOption) {
+            case 'mountain':
+                document.body.style.backgroundImage = "url('path_to_mountain_image')";
+                break;
+            case 'forest':
+                document.body.style.backgroundImage = "url('path_to_forest_image')";
+                break;
+            // Add more cases for additional options
+            default:
+                document.body.style.backgroundImage = "none"; // Reset to default or specify a default background
+        }
+    }
+}
