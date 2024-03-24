@@ -1,3 +1,5 @@
+polariod_border = new Boolean(false);
+film_border = new Boolean(false);
 function myFunction(elem)
 {
     console.log(elem.id);
@@ -15,15 +17,32 @@ function myFunction(elem)
                     img.style.margin = '10px';
                     previewContainer.appendChild(img);
                 };
+                console.log(file);
                 reader.readAsDataURL(file);
             }
         });
     }
     if(elem.id == "page-polariod" ){
-        window.location.href = "polariod/polariod.html";
+        if(polariod_border == false) {
+            elem.style.borderStyle = "solid";
+            elem.style.borderColor = "black";
+            elem.style.borderWidth = "2px";
+            polariod_border = Boolean(true);
+        } else {
+            elem.style.border = 0;
+            polariod_border = Boolean(false);
+        }
     }
     if(elem.id == "page-film") {
-        window.location.href = "film/film.html";
+        if(film_border == false) {
+            elem.style.borderStyle = "solid";
+            elem.style.borderColor = "black";
+            elem.style.borderWidth = "2px";
+            film_border = Boolean(true);
+        } else {
+            elem.style.border = 0;
+            film_border = Boolean(false);
+        }
     }
 }
 

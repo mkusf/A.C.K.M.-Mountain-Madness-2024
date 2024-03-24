@@ -22,7 +22,7 @@ a{
     justify-content: center;
     align-items: center;
     min-height: 20vh;
-    padding: 10px;
+    padding: 18px;
 }
 
 .upload-options {
@@ -49,8 +49,15 @@ a{
 .upload-title {
 
     font-size: 5.5em;
+    /*
     margin-top: 0.8em;
     margin-bottom: 0.1em;
+    */
+    margin:0.1em;
+}
+.website-gallery {
+    font-size: 3.5em;
+    margin-top: 0.3em;
 }
 .form-group {
     padding-bottom: 1em;
